@@ -38,10 +38,14 @@
       // Load the content into the main element
       $('main').load(page);
     });
-  });
 
-  $('.grid').masonry({
-    // options
-    itemSelector: '.grid-item',
-    columnWidth: 200
+    var $grid = $('.grid').masonry({
+      itemSelector: '.grid-item',
+      columnWidth: '.grid-sizer',
+      percentPosition: true
+    });
+
+    $grid.imagesLoaded().progress(function() {
+      $grid.masonry('layout');
+    });
   });

@@ -7,10 +7,22 @@ body, html {
 }
 
 main {
+    /* background-color: blue; */
     flex: 1;
     padding: 20px;
     overflow-y: auto;
 }
+
+/* work on features of posts */
+
+.grid-item {
+  margin-bottom: .75px; /* Add space between items */
+  padding: 15px;
+  background-color: #f8f9fa; /* Light gray background */
+  border-radius: 5px;
+}
+
+/* features of posts end here */
 
 #bottom-nav {
     background-color: #333;
