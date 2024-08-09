@@ -12,56 +12,8 @@
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/masonry-docs.min.js"></script>
-<style>
-    #sidenav {
-      height: 100%;
-      width: 250px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      background-color: #111;
-      padding-top: 60px;
-      transition: 0.3s;
-      transform: translateX(-100%);
-      z-index: 1000;
-    }
-    #sidenav a {
-      padding: 8px 8px 8px 32px;
-      text-decoration: none;
-      font-size: 25px;
-      color: #818181;
-      display: block;
-      transition: 0.3s;
-    }
-    #sidenav a:hover {
-      color: #f1f1f1;
-    }
-    #sidenav .closebtn {
-      position: absolute;
-      top: 0;
-      right: 25px;
-      font-size: 36px;
-      margin-left: 50px;
-    }
-    .openbtn {
-      font-size: 20px;
-      cursor: pointer;
-      background-color: #111;
-      color: white;
-      border: none;
-    }
-    .overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 999;
-    }
-  </style>
+    <script src="assets/js/masonry.pkgd.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </head>
 <body>
   
@@ -73,89 +25,44 @@
     <a href="#">Contact</a>
   </div>
   <div class="overlay" id="overlay" onclick="closeNav()"></div>
-    <header>
-      <nav aria-label="Page navigation">
-        <ul class="pagination">
-          <li class="page-item">
-            <button class="fa-solid fa-bars openbtn" onclick="openNav()"></button>
-          </li>
-          <li class="page-item"><a>LOGO</a></li>
-          <li class="page-item">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#connections">
-              <a class="fa-solid fa-link" href="#"></a>
-            </button>
-          </li>
-        </ul>
-      </nav>
-      <div class="modal fade" id="connections"data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body"></div>
-            <div class="modal-footer"></div>
+  <header>
+    <nav aria-label="Page navigation">
+      <ul class="pagination">
+        <li class="page-item">
+          <button class="fa-solid fa-bars openbtn" onclick="openNav()"></button>
+        </li>
+        <li class="page-item"><a>LOGO</a></li>
+        <li class="page-item">
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#connections">
+            <a class="fa-solid fa-link" href="#"></a>
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <div class="modal fade" id="connections"data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer"></div>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
     
-    <main></main>
+  <main></main>
 
-    <footer>
-        <nav id="bottom-nav" aria-label="Page navigation">
-            <ul class="pagination">
-              <li class="page-item"><a class="fa-solid fa-stream" data-page="feeds.html" href="#"></a></li>
-              <li class="page-item"><a class="fa-solid fa-home" data-page="home.html" href="#"></a></li>
-              <li class="page-item"><a class="fa-solid fa-message" data-page="chat.html" href="#"></a></li>
-            </ul>
-          </nav>
-          <script>
-
-            // SIDE NAV
-            function openNav() {
-              document.getElementById("sidenav").style.transform = "translateX(0)";
-              document.getElementById("overlay").style.display = "block";
-            }
-          
-            function closeNav() {
-              document.getElementById("sidenav").style.transform = "translateX(-100%)";
-              document.getElementById("overlay").style.display = "none";
-            }
-          
-            document.addEventListener('click', function(event) {
-              var sidenav = document.getElementById('sidenav');
-              var overlay = document.getElementById('overlay');
-              if (!sidenav.contains(event.target) && !event.target.matches('.openbtn')) {
-                closeNav();
-              }
-            });
-
-            // BOTTOM NAV
-            
-            $(document).ready(function() {
-
-              // Load the last visited page from localStorage, or default to 'home.html'
-              var lastPage = localStorage.getItem('currentPage') || 'home.html';
-              $('main').load(lastPage);
-
-              // Handle click events on nav links
-              $("#bottom-nav>ul>.page-item>a").click(function(e) {
-                e.preventDefault(); // Prevent default link behavior
-              
-                // Get the page to load from the data-page attribute
-                var page = $(this).data('page');
-              
-                // Save the current page to localStorage
-                localStorage.setItem('currentPage', page);
-              
-                // Load the content into the main element
-                $('main').load(page);
-              });
-            });
-
-          </script>
-    </footer>
+  <footer>
+    <nav id="bottom-nav" aria-label="Page navigation">
+      <ul class="pagination">
+        <li class="page-item"><a class="fa-solid fa-stream" data-page="feeds.html" href="#"></a></li>
+        <li class="page-item"><a class="fa-solid fa-home" data-page="home.html" href="#"></a></li>
+        <li class="page-item"><a class="fa-solid fa-message" data-page="chat.html" href="#"></a></li>
+      </ul>
+    </nav>
+  </footer>
 </body>
 </html>
