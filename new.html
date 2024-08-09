@@ -1,53 +1,71 @@
-<script>
-  $(document).ready(function() {
-  // Load the last visited page from localStorage, or default to 'home.html'
-  var lastPage = localStorage.getItem('currentPage') || 'home.html';
-  $('main').load(lastPage);
-
-  // Handle click events on nav links
-  $("#bottom-nav>ul>.page-item>a").click(function(e) {
-    e.preventDefault(); // Prevent default link behavior
-
-    // Get the page to load from the data-page attribute
-    var page = $(this).data('page');
-
-    // Save the current page to localStorage
-    localStorage.setItem('currentPage', page);
-
-    // Load the content into the main element
-    $('main').load(page);
-  });
-});
-
-$('main').load('home.html');
-            $( "#bottom-nav>ul>.page-item>a" ).on( "click", function(e) {
-              e.preventDefault; // Prevent default link behaviour
-
-              // Get the page to load from the data-page attribute
-              var page = $(this).data('page');
-
-              // Load the content into the main element
-              $('main').load(page);              
-            });
-
-            
-            $(document).ready(function() {
-              // Load the last visited page from localStorage, or default to 'home.html'
-              var lastPage = localStorage.getItem('currentPage') || 'home.html';
-              $('main').load(lastPage);
-                // Handle click events on nav links
-              $( "#bottom-nav>ul>.page-item>a" ).click(function(e) {
-                e.preventDefault(); // Prevent default link behavior
-              
-                // Get the page to load from the data-page attribute
-                var page = $(this).data('page');
-              
-                // Save the current page to localStorage
-                localStorage.setItem('currentPage', page);
-              
-                // Load the content into the main element
-                $('main').load(page);
-              });
-            });
-
-</script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/masonry.pkgd.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</head>
+<body>
+  <div class="container-fluid">
+    <!-- add extra container element for Masonry -->
+    <div class="grid">
+      <!-- add sizing element for columnWidth -->
+      <div class="grid-sizer col-xs-4"></div>
+      <!-- items use Bootstrap .col- classes -->
+      <div class="grid-item col-xs-8">
+        <!-- wrap item content in its own element -->
+        1<div class="grid-item-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum corporis porro eaque non iste dolor asperiores laudantium, hic facilis esse, explicabo fugit reprehenderit velit magni, incidunt pariatur mollitia voluptate et.</div>
+      </div>
+      <div class="grid-item col-xs-8">
+        <!-- wrap item content in its own element -->
+        2<div class="grid-item-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum corporis porro eaque non iste dolor asperiores laudantium, hic facilis esse, explicabo fugit reprehenderit velit magni, incidunt pariatur mollitia voluptate et.</div>
+      </div>
+      <div class="grid-item col-xs-8">
+        <!-- wrap item content in its own element -->
+        3<div class="grid-item-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum corporis porro eaque non iste dolor asperiores laudantium, hic facilis esse, explicabo fugit reprehenderit velit magni, incidunt pariatur mollitia voluptate et.</div>
+      </div>
+      <div class="grid-item col-xs-8">
+        <!-- wrap item content in its own element -->
+        4<div class="grid-item-content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat incidunt et cum nobis necessitatibus porro ullam. Qui eius nobis ea rem iusto, quos amet blanditiis quo ullam eum quibusdam enim?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum corporis porro eaque non iste dolor asperiores laudantium, hic facilis esse, explicabo fugit reprehenderit velit magni, incidunt pariatur mollitia voluptate et.</div>
+      </div>
+      <div class="grid-item col-xs-4">
+        5<div class="grid-item-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum corporis porro eaque non iste dolor asperiores laudantium, hic facilis esse, explicabo fugit reprehenderit velit magni, incidunt pariatur mollitia voluptate et.</div>
+      </div>
+      <div class="grid-item col-xs-8">
+        <!-- wrap item content in its own element -->
+        6<div class="grid-item-content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat incidunt et cum nobis necessitatibus porro ullam. Qui eius nobis ea rem iusto, quos amet blanditiis quo ullam eum quibusdam enim?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum corporis porro eaque non iste dolor asperiores laudantium, hic facilis esse, explicabo fugit reprehenderit velit magni, incidunt pariatur mollitia voluptate et.</div>
+      </div>
+      <div class="grid-item col-xs-4">
+        7<div class="grid-item-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum corporis porro eaque non iste dolor asperiores laudantium, hic facilis esse, explicabo fugit reprehenderit velit magni, incidunt pariatur mollitia voluptate et.</div>
+      </div>
+      <div class="grid-item col-xs-8">
+        <!-- wrap item content in its own element -->
+        8<div class="grid-item-content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat incidunt et cum nobis necessitatibus porro ullam. Qui eius nobis ea rem iusto, quos amet blanditiis quo ullam eum quibusdam enim?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum corporis porro eaque non iste dolor asperiores laudantium, hic facilis esse, explicabo fugit reprehenderit velit magni, incidunt pariatur mollitia voluptate et.</div>
+      </div>
+      <div class="grid-item col-xs-4">
+        9<div class="grid-item-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum corporis porro eaque non iste dolor asperiores laudantium, hic facilis esse, explicabo fugit reprehenderit velit magni, incidunt pariatur mollitia voluptate et.</div>
+      </div>
+      <div class="grid-item col-xs-4">
+        <div class="grid-item-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum corporis porro eaque non iste dolor asperiores laudantium, hic facilis esse, explicabo fugit reprehenderit velit magni, incidunt pariatur mollitia voluptate et.</div>
+      </div>
+      <div class="grid-item col-xs-4">
+        <div class="grid-item-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum corporis porro eaque non iste dolor asperiores laudantium, hic facilis esse, explicabo fugit reprehenderit velit magni, incidunt pariatur mollitia voluptate et.</div>
+      </div>
+      ...
+    </div>
+  </div>
+</body>
+</html>

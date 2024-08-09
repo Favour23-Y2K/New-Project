@@ -7,10 +7,10 @@ body, html {
 }
 
 main {
-    /* background-color: blue; */
-    flex: 1;
-    padding: 20px;
-    overflow-y: auto;
+  /* background-color: blue; */
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
 }
 
 /* work on features of posts */
@@ -21,6 +21,11 @@ main {
   background-color: #f8f9fa; /* Light gray background */
   border-radius: 5px;
 }
+
+.grid-sizer, .grid-item { 
+  width: 50%; 
+}
+
 
 /* features of posts end here */
 
@@ -97,6 +102,3 @@ nav ul li a:hover {
   background: rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
-
-.grid-item { width: 200px; }
-.grid-item--width2 { width: 400px; }
