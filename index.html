@@ -17,15 +17,16 @@
 </head>
 <body>
 
-  <div id="sidenav" class="bg-dark">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
-  </div>
   <div class="overlay" id="overlay" onclick="closeNav()"></div>
   <header>
+    
+    <div id="sidenav" class="bg-dark">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
     <nav aria-label="Page navigation">
       <ul class="pagination">
         <li class="page-item">
@@ -34,27 +35,10 @@
           </button>
         </li>
         <li class="page-item"><a>LOGO</a></li>
-        <li class="page-item">
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#connections">
-            <a class="fa-solid fa-link" href="#"></a>
-          </button>
-        </li>
       </ul>
     </nav>
-    <div class="modal fade" id="connections"data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body"></div>
-          <div class="modal-footer"></div>
-        </div>
-      </div>
-    </div>
   </header>
-  <br><br><br>
+  <br><br>
     
   <main></main>
 
@@ -64,6 +48,7 @@
         <li class="page-item"><a class="fa-solid fa-stream" data-page="feeds.html" href="#"></a></li>
         <li class="page-item"><a class="fa-solid fa-home" data-page="home.html" href="#"></a></li>
         <li class="page-item"><a class="fa-solid fa-message" data-page="chat.html" href="#"></a></li>
+        <li class="page-item"><a class="fa-solid fa-link" data-page="connections.html" href="#"></a></li>
       </ul>
     </nav>
   </footer>
