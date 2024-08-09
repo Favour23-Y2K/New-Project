@@ -6,12 +6,13 @@ body, html {
     flex-direction: column;
 }
 
-main {
-  /* background-color: blue; */
-  flex: 1;
-  padding: 20px;
-  overflow-y: auto;
+header {
+  background-color: #333;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
 }
+
 
 /* work on features of posts */
 
@@ -26,8 +27,8 @@ main {
   width: 50%; 
 }
 
-
 /* features of posts end here */
+
 
 #bottom-nav {
     background-color: #333;

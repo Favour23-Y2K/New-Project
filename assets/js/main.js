@@ -18,19 +18,28 @@ document.addEventListener('click', function(event) {
   
 $(document).ready(function() {
 
-  var $grid = $('.grid').masonry({
-    itemSelector: '.grid-item', // use a separate class for itemSelector, other than .col-
-    columnWidth: '.grid-sizer',
-    percentPosition: true
-  });
+  // Initialize Masonry
+  function initializeMasonry() {
+    var $grid = $('.grid').masonry({
+      itemSelector: '.grid-item',
+      columnWidth: '.grid-sizer',
+      percentPosition: true
+    });
 
-  $grid.imagesLoaded().progress(function() {
+    $grid.imagesLoaded().progress(function() {
       $grid.masonry('layout');
-  });
+    });
+  }
+
+  // Initial load
+  initializeMasonry();
 
   // Load the last visited page from localStorage, or default to 'home.html'
   var lastPage = localStorage.getItem('currentPage') || 'home.html';
-  $('main').load(lastPage);
+  $('main').load(lastPage, function() {
+    // Initialize Masonry after loading new content
+    initializeMasonry();
+  });
   
   // Handle click events on nav links
   $("#bottom-nav>ul>.page-item>a").click(function(e) {
@@ -43,7 +52,10 @@ $(document).ready(function() {
     localStorage.setItem('currentPage', page);
 
     // Load the content into the main element
-    $('main').load(page);
+    $('main').load(page, function() {
+      // Initialize Masonry after loading new content
+      initializeMasonry();
+    });
   });
 
 });
