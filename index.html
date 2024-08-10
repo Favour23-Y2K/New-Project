@@ -19,17 +19,17 @@
 
   <div class="overlay" id="overlay" onclick="closeNav()"></div>
   <header>
-    
     <div id="sidenav" class="bg-dark">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
       <a href="#">About</a>
       <a href="#">Services</a>
       <a href="#">Clients</a>
       <a href="#">Contact</a>
     </div>
+    
     <nav aria-label="Page navigation">
       <ul class="pagination">
-        <li class="page-item">
+        <li id="side-btn" class="page-item">
           <button class="fa-solid fa-bars openbtn" onclick="openNav()">
             <a href="#"></a>
           </button>
@@ -37,6 +37,7 @@
         <li class="page-item"><a>LOGO</a></li>
       </ul>
     </nav>
+
   </header>
   <br><br>
     
@@ -45,10 +46,10 @@
   <footer>
     <nav id="bottom-nav" aria-label="Page navigation">
       <ul class="pagination">
-        <li class="page-item"><a class="fa-solid fa-stream" data-page="feeds.html" href="#"></a></li>
         <li class="page-item"><a class="fa-solid fa-home" data-page="home.html" href="#"></a></li>
-        <li class="page-item"><a class="fa-solid fa-message" data-page="chat.html" href="#"></a></li>
-        <li class="page-item"><a class="fa-solid fa-link" data-page="connections.html" href="#"></a></li>
+        <li class="page-item"><a class="fa-solid fa-stream" data-page="feeds.html" href="#"></a></li>
+        <li class="page-item"><a class="fa-solid fa-envelope" data-page="chat.html" href="#"></a></li>
+        <li class="page-item"><a class="fa-solid fa-users" data-page="connections.html" href="#"></a></li>
       </ul>
     </nav>
   </footer>
