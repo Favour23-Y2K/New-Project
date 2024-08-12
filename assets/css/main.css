@@ -15,9 +15,19 @@ header {
   background-color: #f8f9fa;
   border-bottom: 1px solid #dee2e6;
   z-index: 1030; /* Ensure it’s above other content */
-
 }
 
+body * {
+  position: relative;
+  max-width: 100%; /* Ensure children don't exceed the max-width of the parent */
+  box-sizing: border-box; /* Include padding and border in the element's width */
+}
+
+body {
+  width: 100%;
+  max-width: 10in;
+  align-self: center;
+}
 
 /* work on features of posts */
 
@@ -36,20 +46,30 @@ header {
 
 
 #bottom-nav {
-    background-color: #333;
-    color: #fff;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  max-width: 10in;
+  align-self: center;
+  bottom: 0;
+  /* left: 0; */
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    margin: 0;
-    padding: 10px 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 10px 0;
+  /* position: relative; */
+}
+
+nav#top-nav {
+  display: block;
+  float: left;
+  padding-bottom: 25px;
+  width: 100%;
 }
 
 nav ul li a {
@@ -61,9 +81,20 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+nav ul li#logo {
+  position: absolute;
+  left: 50%;
+}
+
+nav>ul>li#side-btn {
+  margin-inline: 15px;
+  position: absolute;
+  left: 0;
+}
+
 #sidenav {
   height: 100%;
-  width: 250px;
+  width: 450px;
   position: fixed;
   top: 0;
   left: 0;
@@ -84,13 +115,13 @@ nav ul li a:hover {
 #sidenav a:hover {
   color: #f1f1f1;
 }
-/* #sidenav .closebtn {
+#sidenav .closebtn {
   position: absolute;
   top: 0;
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
-} */
+}
 .openbtn {
   font-size: 20px;
   cursor: pointer;
