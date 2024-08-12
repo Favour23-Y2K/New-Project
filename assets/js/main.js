@@ -59,3 +59,9 @@ $(document).ready(function() {
   });
 
 });
+
+$(document).ready(function(){
+  $(".your-scrollbar-class").mCustomScrollbar({
+      theme: "minimal-dark"  // You can choose from various themes
+  });
+});
