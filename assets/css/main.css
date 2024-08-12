@@ -6,21 +6,22 @@ body, html {
     flex-direction: column;
 }
 
+body * {
+  position: relative;
+  max-width: 100%; /* Ensure children don't exceed the max-width of the parent */
+  box-sizing: border-box; /* Include padding and border in the element's width */
+}
+
 header {
   position: fixed;
   top: 0;
   right: 0;
   width: 100%;
+  max-width: none;
   /* height: 75px; */
   background-color: #f8f9fa;
   border-bottom: 1px solid #dee2e6;
   z-index: 1030; /* Ensure it’s above other content */
-}
-
-body * {
-  position: relative;
-  max-width: 100%; /* Ensure children don't exceed the max-width of the parent */
-  box-sizing: border-box; /* Include padding and border in the element's width */
 }
 
 body {
@@ -83,7 +84,7 @@ nav ul li a:hover {
 
 nav ul li#logo {
   position: absolute;
-  left: 50%;
+  /* left: 50%; */
 }
 
 nav>ul>li#side-btn {
@@ -94,7 +95,7 @@ nav>ul>li#side-btn {
 
 #sidenav {
   height: 100%;
-  width: 450px;
+  width: 350px;
   position: fixed;
   top: 0;
   left: 0;
@@ -125,9 +126,11 @@ nav>ul>li#side-btn {
 .openbtn {
   font-size: 20px;
   cursor: pointer;
-  background-color: #111;
+  background-color: #727171;
+  /* width: 35px; */
   color: white;
   border: none;
+  border-radius: 3px;
 }
 .overlay {
   display: none;
@@ -138,8 +141,4 @@ nav>ul>li#side-btn {
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   z-index: 999;
-}
-
-#side-btn  {
-  /* position: fixed; */
 }
