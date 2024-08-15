@@ -2,16 +2,47 @@
     .fa-home{
         color: red;
     }
+    main{
+        height: 100%;
+        align-content: center;
+    }
+    div#create_post{
+        height: 50%;
+    }
+    div#notifications{
+        height: 50%;
+        overflow-y: auto;
+    }
 </style>
+<script>
+</script>
 
 <div id="create_post" class="col-12">
-    <form action="">
-        <title>What would you love to share today</title>
+    <div>
         <img src="" alt="profile_photo">
-        <textarea class="col-8" name="" id=""></textarea>
-    </form>
+        <a href="">view profile</a>    
+    </div>
+    <div>
+        <form action="">
+            <label>What would you love to share today</label>
+            <textarea class="col-8" name="" id=""></textarea>
+            <ul>
+                <li>
+                    <label for="imageupload"><i class="fa-solid fa-image"></i></label>
+                    <input type="file" id="imageupload" name="imageupload" accept="image/png, image/jpeg" multiple>
+                </li>
+                <li>
+                    <label for="videoupload"><i class="fa-solid fa-video-camera"></i></label>
+                    <input type="file" id="videoupload" name="videoupload" accept="video/mp4">
+                </li>
+            </ul>
+            <button type="submit">
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </form>
+    </div>
 </div>
-
+<!-- 
 <div class="content mCustomScrollbar" data-mcs-theme="minimal">
     <ul>
         <li class="notif">
@@ -75,4 +106,4 @@
             </a>
         </li>
     </ul>
-</div>
+</div> -->

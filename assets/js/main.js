@@ -65,3 +65,11 @@ $(document).ready(function(){
       theme: "minimal-dark"  // You can choose from various themes
   });
 });
+
+
+$('#imageupload').on('change', function(){
+  if (this.files.length > 4) {
+      alert('You can only upload a maximum of 4 files.');
+      $(this).val(''); // Clear the selected files
+  }
+});
