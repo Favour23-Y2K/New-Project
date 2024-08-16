@@ -10,6 +10,7 @@ body * {
   position: relative;
   max-width: 100%; /* Ensure children don't exceed the max-width of the parent */
   box-sizing: border-box; /* Include padding and border in the element's width */
+	font-family: "Verdana",Geneva,sans-serif;
 }
 
 header {
