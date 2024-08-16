@@ -143,6 +143,7 @@ nav>ul>li#side-btn {
   z-index: 999;
 }
 
+
 /* Home page styling */
 
 #create_post{
@@ -168,14 +169,12 @@ nav>ul>li#side-btn {
 }
 #notifications>h4 {
   position: fixed;
-  margin: 0 auto;
-  padding: 0 auto;
   width: 100%;
   max-width: 10in;
   text-align: center;
   background-color: #f8f9fa;
-  z-index: 2;
   padding: 6px;
+  z-index: 2;
 }
 div.boundary{
   /* float: left; */
