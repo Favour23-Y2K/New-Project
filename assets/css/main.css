@@ -152,16 +152,18 @@ nav>ul>li#side-btn {
 /* Home page styling */
 
 #create_post{
-  height: 29vh;
+  height: 29vh !important;
   /* background-color: blue; */
 }
 #notifications{
-  height: 60vh;
+  height: 60vh !important;
   display: block;
+  overflow: hidden;
+  /* background-color: purple; */
 }
 #notifs {
+  /* background-color: red; */
   height: 90%;
-  background-color: red;
 }
 #notifications * {
   display: inline-block;
@@ -179,18 +181,23 @@ nav>ul>li#side-btn {
   z-index: 2;
 }
 #notifications ul {
-  width: 100%;
+  width: 100% !important;
   margin: 0;
   padding: 0;
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 #notifications ul>li {
-  background-color: blue;
+  /* background-color: blue; */
   list-style-type: none;
-  /* width: 100%; */
+  width: 80vw !important;
+  /* border-bottom: #111; */
+  /* display: block; */
 }
 
-.mCustomScrollBox .mCSB_container {
-  padding: 0 !important; /* Remove padding */
-  margin: 0 !important;  /* Remove margin */
+#notifications ul>li>a {
+  display: block;
+  border: #111;
+  padding: 15px;
+  background-color: #f1f1f1;
+  margin-bottom: 2px;
 }
