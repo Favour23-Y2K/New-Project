@@ -142,3 +142,44 @@ nav>ul>li#side-btn {
   background: rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
+
+/* Home page styling */
+
+#create_post{
+  height: 40%;
+  /* background-color: blue; */
+}
+#notifications{
+  height: 60%;
+  overflow-y: auto;
+  display: block;
+  /* align-content: stretch; */
+  /* background-color: red; */
+}
+#notifications>ul>li {
+  background-color: blue;
+  list-style-type: none;
+}
+#notifications * {
+  display: inline-block;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+#notifications>h4 {
+  position: fixed;
+  margin: 0 auto;
+  padding: 0 auto;
+  width: 100%;
+  max-width: 10in;
+  text-align: center;
+  background-color: #f8f9fa;
+  z-index: 2;
+  padding: 6px;
+}
+div.boundary{
+  /* float: left; */
+  display: inline;
+  height: 100%;
+  background-color: green;
+}
