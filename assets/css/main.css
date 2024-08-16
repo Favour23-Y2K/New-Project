@@ -162,7 +162,7 @@ nav>ul>li#side-btn {
   /* background-color: purple; */
 }
 #notifs {
-  background-color: red;
+  /* background-color: red; */
   height: 90%;
   overflow: scroll;
 }
