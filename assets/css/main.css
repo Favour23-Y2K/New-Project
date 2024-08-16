@@ -4,6 +4,7 @@ body, html {
     height: 100%;
     display: flex;
     flex-direction: column;
+    overflow-y: hidden;
 }
 
 body * {
@@ -56,6 +57,7 @@ body {
   align-self: center;
   bottom: 0;
   /* left: 0; */
+  /* display: none; */
 }
 
 nav ul {
@@ -146,21 +148,20 @@ nav>ul>li#side-btn {
 
 
 /* Home page styling */
+/* Home page styling */
+/* Home page styling */
 
 #create_post{
-  height: 40%;
+  height: 29vh;
   /* background-color: blue; */
 }
 #notifications{
-  height: 60%;
-  overflow-y: auto;
+  height: 60vh;
   display: block;
-  /* align-content: stretch; */
-  /* background-color: red; */
 }
-#notifications>ul>li {
-  background-color: blue;
-  list-style-type: none;
+#notifs {
+  height: 90%;
+  background-color: red;
 }
 #notifications * {
   display: inline-block;
@@ -177,9 +178,19 @@ nav>ul>li#side-btn {
   padding: 6px;
   z-index: 2;
 }
-div.boundary{
-  /* float: left; */
-  display: inline;
-  height: 100%;
-  background-color: green;
+#notifications ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: aqua;
+}
+#notifications ul>li {
+  background-color: blue;
+  list-style-type: none;
+  /* width: 100%; */
+}
+
+.mCustomScrollBox .mCSB_container {
+  padding: 0 !important; /* Remove padding */
+  margin: 0 !important;  /* Remove margin */
 }
