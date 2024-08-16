@@ -152,7 +152,7 @@ nav>ul>li#side-btn {
 /* Home page styling */
 
 #create_post{
-  height: 25vh !important;
+  height: 30vh !important;
   /* background-color: blue; */
 }
 #notifications{
@@ -173,13 +173,13 @@ nav>ul>li#side-btn {
   margin: 0;
 }
 #notifications>h4 {
-  position: fixed;
+  /* position: fixed; */
   width: 100%;
   max-width: 10in;
   text-align: center;
   background-color: #f8f9fa;
   padding: 6px;
-  z-index: 2;
+  /* z-index: 2; */
 }
 #notifications ul {
   width: 100% !important;
