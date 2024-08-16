@@ -4,7 +4,7 @@ body, html {
     height: 100%;
     display: flex;
     flex-direction: column;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 
 body * {
@@ -162,8 +162,9 @@ nav>ul>li#side-btn {
   /* background-color: purple; */
 }
 #notifs {
-  /* background-color: red; */
+  background-color: red;
   height: 90%;
+  overflow: scroll;
 }
 #notifications * {
   display: inline-block;
@@ -189,7 +190,7 @@ nav>ul>li#side-btn {
 #notifications ul>li {
   /* background-color: blue; */
   list-style-type: none;
-  width: 80vw !important;
+  /* width: 80vw !important; */
   /* border-bottom: #111; */
   /* display: block; */
 }

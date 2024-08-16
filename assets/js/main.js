@@ -1,16 +1,8 @@
 (function($) {
-  // Wait until the window is fully loaded, then initialize the custom scrollbar
+  // Wait until the window is fully loaded
   $(window).on("load", function() {
-    initScrollbar();
+    // Custom scrollbar initialization removed
   });
-
-  // Function to initialize the custom scrollbar using the mCustomScrollbar plugin
-  function initScrollbar() {
-    // Destroy any existing scrollbar instance and reinitialize it with minimal theme
-    $("body").mCustomScrollbar("destroy").mCustomScrollbar({
-      theme: "minimal"
-    });
-  }
 
   // SIDE NAV
   // Function to open the side navigation by translating its X position to 0
@@ -51,13 +43,12 @@
       });
     }
 
-    // Function to load a new page and reinitialize Masonry and the scrollbar
+    // Function to load a new page and reinitialize Masonry
     function loadPage(page) {
       // Load the content of the page into the main element
       $('main').load(page, function() {
-        // Reinitialize Masonry and custom scrollbar after the new content is loaded
+        // Reinitialize Masonry after the new content is loaded
         initializeMasonry();
-        initScrollbar();
       });
     }
 
