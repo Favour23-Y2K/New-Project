@@ -164,7 +164,7 @@ nav>ul>li#side-btn {
 #notifs {
   /* background-color: red; */
   height: 90%;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 #notifications * {
   display: inline-block;
