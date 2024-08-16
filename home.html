@@ -6,104 +6,84 @@
         height: 100%;
         align-content: center;
     }
-    div#create_post{
+    #create_post{
         height: 50%;
+        /* background-color: blue; */
     }
-    div#notifications{
+    #notifications{
         height: 50%;
         overflow-y: auto;
+        display: block;
+        /* align-content: stretch; */
+        /* background-color: red; */
+    }
+    #notifications>ul>li {
+        background-color: blue;
+        list-style-type: none;
+    }
+    #notifications * {
+        display: inline-block;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+    }
+    div.boundary{
+        /* float: left; */
+        display: inline;
+        height: 100%;
+        background-color: green;
     }
 </style>
-<script>
-</script>
 
-<div id="create_post" class="col-12">
-    <div>
+<section id="create_post">
+    <div class="col-3">
         <img src="" alt="profile_photo">
         <a href="">view profile</a>    
     </div>
-    <div>
-        <form action="">
-            <label>What would you love to share today</label>
-            <textarea class="col-8" name="" id=""></textarea>
-            <ul>
-                <li>
-                    <label for="imageupload"><i class="fa-solid fa-image"></i></label>
-                    <input type="file" id="imageupload" name="imageupload" accept="image/png, image/jpeg" multiple>
-                </li>
-                <li>
-                    <label for="videoupload"><i class="fa-solid fa-video-camera"></i></label>
-                    <input type="file" id="videoupload" name="videoupload" accept="video/mp4">
-                </li>
-            </ul>
-            <button type="submit">
-                <i class="fa-solid fa-paper-plane"></i>
-            </button>
-        </form>
-    </div>
-</div>
-<!-- 
-<div class="content mCustomScrollbar" data-mcs-theme="minimal">
-    <ul>
-        <li class="notif">
-            <a href="">
-                sample
-            </a>
-        </li>
-        <li class="notif">
-            <a href="">
-                sample
-            </a>
-        </li>
-        <li class="notif">
-            <a href="">
-                sample
-            </a>
-        </li>
-        <li class="notif">
-            <a href="">
-                sample
-            </a>
-        </li>
-        <li class="notif">
-            <a href="">
-                sample
-            </a>
-        </li>
-        <li class="notif">
-            <a href="">
-                sample
-            </a>
-        </li>
-        <li class="notif">
-            <a href="">
-                sample
-            </a>
-        </li>
-        <li class="notif">
-            <a href="">
-                sample
-            </a>
-        </li>
-        <li class="notif">
-            <a href="">
-                sample
-            </a>
-        </li>
-        <li class="notif">
-            <a href="">
-                sample
-            </a>
-        </li>
-        <li class="notif">
-            <a href="">
-                sample
-            </a>
-        </li>
-        <li class="notif">
-            <a href="">
-                sample
-            </a>
-        </li>
+    <form class="col-9" action="">
+        <label for="text">What do you want to share today?</label>
+        <textarea class="col-8" name="" id="text"></textarea>
+        <ul>
+            <li>
+                <label for="imageupload"><i class="fa-solid fa-image"></i></label>
+                <input title="imageupload" type="file" id="imageupload" name="imageupload" accept="image/png, image/jpeg" multiple>
+            </li>
+            <li>
+                <label for="videoupload"><i class="fa-solid fa-video-camera"></i></label>
+                <input title="videoupload" type="file" id="videoupload" name="videoupload" accept="video/mp4">
+            </li>
+        </ul>
+        <button title="post" type="submit">
+            <i class="fa-solid fa-paper-plane"></i>
+        </button>
+    </form>
+</section>
+
+<section id="notifications">
+    <div class="col-2"></div>
+    <ul class="col-8 content">
+        <li class="col-12">skkkk</li>
+        <li class="col-12">skkkk</li>
+        <li class="col-12">skkkk</li>
+        <li class="col-12">skkkk</li>
+        <li class="col-12">skkkk</li>
+        <li class="col-12">skkkk</li>
+        <li class="col-12">skkkk</li>
+        <li class="col-12">skkkk</li>
+        <li class="col-12">skkkk</li>
+        <li class="col-12">skkkk</li>
+        <li class="col-12">skkkk</li>
+        <li class="col-12">skkkk</li>
+        <li class="col-12">skkkk</li>
+        <li class="col-12">skkkk</li>
+        <li class="col-12">skkkk</li>
+        <li class="col-12">skkkk</li>
+        <li class="col-12">skkkk</li>
+        <li class="col-12">skkkk</li>
+        <li class="col-12">skkkk</li>
+        <li class="col-12">skkkk</li>
+        <li class="col-12">skkkk</li>
+        <li class="col-12">skkkk</li>
     </ul>
-</div> -->
+    <div class="col-2"></div>
+</section>
